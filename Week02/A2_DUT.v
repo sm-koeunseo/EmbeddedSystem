@@ -9,12 +9,12 @@ module A2_DUT #(
     input   d3
 );
 
-    wire    wS1n;    // s1의 인버터 적용 후
-    wire    wS0n;    // s0의 인버터 적용 후
-    wire    wA0;
-    wire    wA1;
-    wire    wA2;
-    wire    wA3;
+    wire    wS1n;   // s1의 인버터 적용 후
+    wire    wS0n;   // s0의 인버터 적용 후
+    wire    wA0;    // AND_U0 gate 거친 후
+    wire    wA1;    // AND_U1 gate 거친 후
+    wire    wA2;    // AND_U2 gate 거친 후
+    wire    wA3;    // AND_U3 gate 거친 후
 
     not     NOT_U0(wS1n, s1);
     not     NOT_U1(wS0n, s0);

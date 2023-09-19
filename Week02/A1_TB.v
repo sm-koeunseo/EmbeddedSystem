@@ -3,7 +3,6 @@
 // A1_DUT를 활용하여 test해 보기
 module A1_TB;
     
-    // A1_DUT를 호출하여 test bench 진행
     reg     s;
     reg     d0;
     reg     d1;
