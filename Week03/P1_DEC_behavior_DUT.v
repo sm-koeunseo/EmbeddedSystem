@@ -1,3 +1,5 @@
+// 2:4 Decoder using Behavior
+
 module P1_DEC_behavior(
     output  reg     [3:0]   out,
     input           [1:0]   in,

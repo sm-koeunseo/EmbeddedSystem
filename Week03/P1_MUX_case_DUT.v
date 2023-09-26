@@ -1,4 +1,4 @@
-//
+// 4:1 Multiplexer (case)
 
 module P1_MUX_case_DUT(
     output  reg     y,

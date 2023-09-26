@@ -1,4 +1,4 @@
-//
+// 4:1 Multiplexer (if)
 
 module P1_MUX_if_DUT(
     output  reg     y,

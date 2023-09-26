@@ -1,3 +1,5 @@
+// 2:4 Decoder using Dataflow
+
 module P1_DEC_dataflow(
     output      [3:0]   out,
     input       [1:0]   in,

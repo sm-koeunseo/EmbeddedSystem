@@ -1,4 +1,4 @@
-//
+// test bench for 1-bit Full Adder
 
 `timescale 1ns/1ps
 
@@ -9,6 +9,7 @@ module P1_FullAdders_TB;
 
     reg         a, b, ci;
 
+    // 4개의 full adder 모듈을 각각 한 개씩 사용하기
     P1_FA_dataflow1     fa_df1(
         .s          (s_df1  ),
         .co         (co_df1 ),

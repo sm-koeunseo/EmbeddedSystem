@@ -1,3 +1,5 @@
+// 8-bit Ripple Carry Adder
+
 module A3_FA(
     output          s,   // sum
     output          co,  // carry out
@@ -6,11 +8,13 @@ module A3_FA(
     input           ci   // carry in
 );
 
+    // s와 co을 구하는 공식을 대입
     assign          s   = (~a & ~b & ci) + (~a & b & ~ci) + (a & b & ci) + (a & ~b & ~ci);
     assign          co  = (a & b) + (b & ci) + (a & ci);
 
 endmodule
 
+// 8bit adder를 위해 1bit adder 8개 선언 및 할당
 module A3_RCA8(
     output      [7:0]   s,
     output              co,
