@@ -1,1 +1,6 @@
-/work
+\work
+*.bak
+*.wlf
+*.mti
+
+*.mpf
