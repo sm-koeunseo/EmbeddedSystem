@@ -6,7 +6,7 @@ module And3(X, Y, Z, F);
    output F;
    reg F;
 
-   always @(X,Y) begin
+   always @(X, Y, Z) begin
 	   F <= X & Y & Z;
    end				 
 
