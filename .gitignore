@@ -2,5 +2,5 @@
 *.bak
 *.wlf
 *.mti
-
-*.mpf
+*.mpf       
+transcript
