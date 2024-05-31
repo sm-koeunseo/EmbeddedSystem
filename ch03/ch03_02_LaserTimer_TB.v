@@ -10,9 +10,9 @@ module Testbench();
 
     always begin
       Clk <= 1'b0;
-      #5;
+      #10;
       Clk <= 1'b1;
-      #5;
+      #10;
    end
 
     initial begin
