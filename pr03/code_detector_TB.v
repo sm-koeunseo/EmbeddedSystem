@@ -2,7 +2,8 @@
 
 module Testbench();
 
-    reg S, R, G, B, Clk, Rst;
+    reg S, R, G, B;
+    reg Clk, Rst;
     wire U;
     reg [15:0] Index; // 들어갈 수 있는 경우의 수 
     reg [15:0] Key;
@@ -21,15 +22,15 @@ module Testbench();
     initial begin
         for(Index=16'h0000;Index<16'h1000;Index=Index+16'h0001)
         begin // 4,096 cases
-            Rst = 1;
-            S = 0;
-            R = 0;
-            G = 0;
-            B = 0;
+            Rst <= 1;
+            S <= 0;
+            R <= 0;
+            G <= 0;
+            B <= 0;
             @(posedge Clk);
 
-            Rst = 0;
-            S = 1;
+            Rst <= 0;
+            S <= 1;
             #5;
             if (U == 1)
                 $display("Output is 1 when wait state!");
@@ -38,20 +39,21 @@ module Testbench();
             // start -> red1 -> blue -> green -> 
             for (i=0;i<12;i=i+3)
             begin
-                R = Index[i+2];
-                G = Index[i+1];
-                B = Index[i];
+                R <= Index[i+2];
+                G <= Index[i+1];
+                B <= Index[i];
                 #5;
                 if (U == 1)
-                case (i)
-                    0 : $display("Output is 1 when start state!");
-                    3 : $display("Output is 1 when red1 state!");
-                    6 : $display("Output is 1 when blue state!");
-                    9 : $display("Output is 1 when green state!");
-                endcase
+                    case (i)
+                        0 : $display("Output is 1 when start state!");
+                        3 : $display("Output is 1 when red1 state!");
+                        6 : $display("Output is 1 when blue state!");
+                        9 : $display("Output is 1 when green state!");
+                    endcase
                 @(posedge Clk);
             end
 
+            #5;
             // red2 (Index = red2, green, blue, red1)
             if (U == 1) begin
                 if (Index == 16'b0000_100_010_001_100) begin
