@@ -2,5 +2,5 @@
 *.bak
 *.wlf
 *.mti
-
-*.mpf
+*.mpf       # 프로젝트 파일
+transcript  # 로그파일
