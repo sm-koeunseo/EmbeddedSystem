@@ -2,6 +2,7 @@
 
 // 4bit_Adder_beh_global.v
 // 4bit_Comparator_beh.v
+// 4bit_Multiplier.v
 `define WIDTH 4
 
 // 4x32_Register_File_beh.v 헤더에 추가
